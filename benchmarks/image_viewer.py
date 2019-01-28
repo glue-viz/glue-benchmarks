@@ -47,11 +47,11 @@ def get_data_collection_and_viewer():
 def load_wcs_data(data_collection):
 
     data_equ = Data(coords=coordinates_from_wcs(EQUATORIAL_WCS))
-    data_equ['primary'] = np.random.random((1024, 1024))
+    data_equ['primary'] = np.random.random((512, 512))
     data_collection.append(data_equ)
 
     data_gal = Data(coords=coordinates_from_wcs(GALACTIC_WCS))
-    data_gal['primary'] = np.random.random((1024, 1024))
+    data_gal['primary'] = np.random.random((512, 512))
     data_collection.append(data_gal)
 
     wy1, wx1 = data_gal.world_component_ids
@@ -92,7 +92,7 @@ class TestSlicing:
         self.viewer.add_data(self.data)
 
     def time_change_slice(self):
-        for i in range(0, 256, 32):
+        for i in range(0, 256, 64):
             self.viewer.state.slices = (i, 0, 0)
 
 
@@ -120,7 +120,7 @@ class TestSelection:
         load_wcs_data(self.data_collection)
         self.viewer.add_data(self.data_collection[0])
         self.viewer.add_data(self.data_collection[1])
-        roi = CircularROI(500, 500, 200)
+        roi = CircularROI(256, 256, 120)
         py1, px1 = self.data_collection[0].pixel_component_ids
         self.subset_state = RoiSubsetState(px1, py1, roi)
         self.viewer.register_to_hub(self.data_collection.hub)
