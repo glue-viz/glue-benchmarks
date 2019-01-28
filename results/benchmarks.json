@@ -1,0 +1,69 @@
+{
+    "image_viewer.TestBasic.time_add_data": {
+        "code": "class TestBasic:\n    def time_add_data(self, shape):\n        self.viewer.add_data(self.data)\n\n    def setup(self, shape):\n        self.data_collection, self.viewer = get_data_collection_and_viewer()\n        self.data = Data(cube=np.random.random(SHAPES[shape]))\n        self.data_collection.append(self.data)",
+        "name": "image_viewer.TestBasic.time_add_data",
+        "number": 0,
+        "param_names": [
+            "shape"
+        ],
+        "params": [
+            [
+                "'small_2d'",
+                "'medium_2d'",
+                "'large_2d'",
+                "'small_3d'",
+                "'medium_3d'"
+            ]
+        ],
+        "repeat": 0,
+        "sample_time": 0.1,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "cb0eeb8fac233c99caddfb1937572736691ed229e02c4a901c86f92a9b81a9e8",
+        "warmup_time": -1
+    },
+    "image_viewer.TestReprojection.time_reprojection": {
+        "code": "class TestReprojection:\n    def time_reprojection(self):\n        self.viewer.add_data(self.data_collection[1])\n\n    def setup(self):\n        self.data_collection, self.viewer = get_data_collection_and_viewer()\n        load_wcs_data(self.data_collection)\n        self.viewer.add_data(self.data_collection[0])",
+        "name": "image_viewer.TestReprojection.time_reprojection",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "repeat": 0,
+        "sample_time": 0.1,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "c29d169548a5f4a52007875bb8c97f6d29f848cfe990597836add24c3fb0ba76",
+        "warmup_time": -1
+    },
+    "image_viewer.TestSelection.time_selection": {
+        "code": "class TestSelection:\n    def time_selection(self):\n        self.data_collection.new_subset_group(label='Subset', subset_state=self.subset_state)\n\n    def setup(self):\n        self.data_collection, self.viewer = get_data_collection_and_viewer()\n        load_wcs_data(self.data_collection)\n        self.viewer.add_data(self.data_collection[0])\n        self.viewer.add_data(self.data_collection[1])\n        roi = CircularROI(256, 256, 120)\n        py1, px1 = self.data_collection[0].pixel_component_ids\n        self.subset_state = RoiSubsetState(px1, py1, roi)\n        self.viewer.register_to_hub(self.data_collection.hub)",
+        "name": "image_viewer.TestSelection.time_selection",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "repeat": 0,
+        "sample_time": 0.1,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "a11d962f28dce429ea42afc266bbd8c2fb06227831c1177cbf9a8056cd72ffb4",
+        "warmup_time": -1
+    },
+    "image_viewer.TestSlicing.time_change_slice": {
+        "code": "class TestSlicing:\n    def time_change_slice(self):\n        for i in range(0, 256, 64):\n            self.viewer.state.slices = (i, 0, 0)\n\n    def setup(self):\n        self.data_collection, self.viewer = get_data_collection_and_viewer()\n        self.data = Data(cube=np.random.random((256, 256, 256)))\n        self.data_collection.append(self.data)\n        self.viewer.add_data(self.data)",
+        "name": "image_viewer.TestSlicing.time_change_slice",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "repeat": 0,
+        "sample_time": 0.1,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "5957a9870f78900e07f01d3e1edf8a81313bce5c766b9f85c45ba0010463fdb9",
+        "warmup_time": -1
+    },
+    "version": 2
+}
