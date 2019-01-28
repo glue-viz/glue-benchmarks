@@ -26,6 +26,7 @@ class HeadlessImageViewer(MatplotlibImageMixin, MatplotlibViewerMixin, Viewer):
 
     LABEL = '2D Image'
     _state_cls = ImageViewerState
+    large_data_size = 1e12
 
     def __init__(self, session, parent=None, wcs=None, state=None):
         super(HeadlessImageViewer, self).__init__(session, state=state)
