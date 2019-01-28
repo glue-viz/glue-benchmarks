@@ -53,6 +53,7 @@
         "h5py": ["2.9"],
         "bottleneck": ["1.2"],
         "mpl-scatter-density": ["0.4"],
+        "nomkl": []
     },
 
     // The directory (relative to the current directory) that benchmarks are
