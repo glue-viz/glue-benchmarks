@@ -1,0 +1,144 @@
+{
+    "benchmark_version": {
+        "image_viewer.TestBasic.time_add_data": "cb0eeb8fac233c99caddfb1937572736691ed229e02c4a901c86f92a9b81a9e8",
+        "image_viewer.TestReprojection.time_reprojection": "c29d169548a5f4a52007875bb8c97f6d29f848cfe990597836add24c3fb0ba76",
+        "image_viewer.TestSelection.time_selection": "a11d962f28dce429ea42afc266bbd8c2fb06227831c1177cbf9a8056cd72ffb4",
+        "image_viewer.TestSlicing.time_change_slice": "5957a9870f78900e07f01d3e1edf8a81313bce5c766b9f85c45ba0010463fdb9"
+    },
+    "commit_hash": "be420784b849a802b219b9ca991cb1ffe6a97c86",
+    "date": 1542196939000,
+    "ended_at": {
+        "image_viewer.TestBasic.time_add_data": 1548693219000,
+        "image_viewer.TestReprojection.time_reprojection": 1548693226000,
+        "image_viewer.TestSelection.time_selection": 1548693235000,
+        "image_viewer.TestSlicing.time_change_slice": 1548693241000
+    },
+    "env_name": "conda-py3.7-astropy3.1-bottleneck1.2-dill0.2-h5py2.9-ipykernel5.1-ipython7.2-matplotlib3.0-mpl-scatter-density0.4-nomkl-numpy1.15-pandas0.23-qtconsole4.4-qtpy1.5-setuptools40.6-xlrd1.2",
+    "params": {
+        "arch": "x86_64",
+        "astropy": "3.1",
+        "bottleneck": "1.2",
+        "cpu": "Intel(R) Celeron(R) CPU N3450 @ 1.10GHz",
+        "dill": "0.2",
+        "h5py": "2.9",
+        "ipykernel": "5.1",
+        "ipython": "7.2",
+        "machine": "oneesk",
+        "matplotlib": "3.0",
+        "mpl-scatter-density": "0.4",
+        "nomkl": "",
+        "numpy": "1.15",
+        "os": "Ubuntu 16.04.3 LTS",
+        "pandas": "0.23",
+        "python": "3.7",
+        "qtconsole": "4.4",
+        "qtpy": "1.5",
+        "ram": "3885480",
+        "setuptools": "40.6",
+        "xlrd": "1.2"
+    },
+    "profiles": {},
+    "python": "3.7",
+    "requirements": {
+        "astropy": "3.1",
+        "bottleneck": "1.2",
+        "dill": "0.2",
+        "h5py": "2.9",
+        "ipykernel": "5.1",
+        "ipython": "7.2",
+        "matplotlib": "3.0",
+        "mpl-scatter-density": "0.4",
+        "nomkl": "",
+        "numpy": "1.15",
+        "pandas": "0.23",
+        "qtconsole": "4.4",
+        "qtpy": "1.5",
+        "setuptools": "40.6",
+        "xlrd": "1.2"
+    },
+    "results": {
+        "image_viewer.TestBasic.time_add_data": {
+            "params": [
+                [
+                    "'small_2d'",
+                    "'medium_2d'",
+                    "'large_2d'",
+                    "'small_3d'",
+                    "'medium_3d'"
+                ]
+            ],
+            "result": [
+                0.11569083799999991,
+                0.1585070489999998,
+                0.3755197370000012,
+                0.14183904199999997,
+                0.17311333550000008
+            ],
+            "stats": [
+                {
+                    "ci_99": [
+                        0.11484196908976117,
+                        0.11663632457690573
+                    ],
+                    "max": 0.11650838300000022,
+                    "mean": 0.11573914683333346,
+                    "min": 0.1151388020000006,
+                    "n": 6,
+                    "q_25": 0.11525016200000004,
+                    "q_75": 0.11614977199999998,
+                    "std": 0.0005227119620116311
+                },
+                {
+                    "ci_99": [
+                        0.15274801931111426,
+                        0.16294036028888564
+                    ],
+                    "max": 0.16126722999999998,
+                    "mean": 0.15784418979999995,
+                    "min": 0.1542898459999993,
+                    "n": 5,
+                    "q_25": 0.15574644900000045,
+                    "q_75": 0.15941037500000022,
+                    "std": 0.002515686742149199
+                },
+                null,
+                {
+                    "ci_99": [
+                        0.13992554308210473,
+                        0.14650359899999987
+                    ],
+                    "max": 0.14650359899999987,
+                    "mean": 0.14280521739999993,
+                    "min": 0.14161359900000026,
+                    "n": 5,
+                    "q_25": 0.1417875249999998,
+                    "q_75": 0.1422823219999998,
+                    "std": 0.0018622885487679037
+                },
+                {
+                    "ci_99": [
+                        0.10421591049999712,
+                        0.24201076050000297
+                    ],
+                    "max": 0.17449128400000014,
+                    "mean": 0.17311333550000008,
+                    "min": 0.17173538700000002,
+                    "n": 2,
+                    "q_25": 0.17242436125000005,
+                    "q_75": 0.1738023097500001,
+                    "std": 0.001377948500000059
+                }
+            ]
+        },
+        "image_viewer.TestReprojection.time_reprojection": 0.7662857330000001,
+        "image_viewer.TestSelection.time_selection": 1.2151017800000004,
+        "image_viewer.TestSlicing.time_change_slice": 0.37172841499999976
+    },
+    "started_at": {
+        "image_viewer.TestBasic.time_add_data": 1548693156000,
+        "image_viewer.TestReprojection.time_reprojection": 1548693219000,
+        "image_viewer.TestSelection.time_selection": 1548693226000,
+        "image_viewer.TestSlicing.time_change_slice": 1548693235000
+    },
+    "version": 1
+}
